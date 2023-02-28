@@ -46,5 +46,13 @@ plt.xlabel('Price')
 plt.ylabel('Frequency')
 plt.show()
 
+df['Sentiment_Polarity'] = df['Reviews'].apply(lambda x: 1 if x == 'Positive' else (-1 if x == 'Negative' else 0))
+
+# Finally, plot the distribution of sentiment polarity values
+df['Sentiment_Polarity'].plot(kind='hist', bins=20, figsize=(10, 6))
+plt.title('Distribution of Sentiment Polarity')
+plt.xlabel('Sentiment Polarity')
+plt.ylabel('Frequency')
+plt.show()
 
 
