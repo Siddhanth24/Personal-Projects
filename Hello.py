@@ -8,7 +8,6 @@ df = pd.read_csv('googleplaystore.csv')
 # Drop duplicate rows
 df.drop_duplicates(subset='App', inplace=True)
 print(df.columns)
-# Convert 'Reviews', 'Size', and 'Price' columns to numeric data types
 #df['Reviews'] = pd.to_numeric(df['Reviews'])
 # create sample DataFrame
 df['Reviews'] = pd.to_numeric(df['Reviews'], errors='coerce')
